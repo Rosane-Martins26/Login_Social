@@ -1,40 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Login Form | CodeLab</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c4da4bf375.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projeto 02 - Sing Up Form - Create Account</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
+    <main>
+        <h1>Create Your Account</h1>
+        <div class="social-media">
+            <a href="#">
+                <img src="assets/google.png" alt="Google">
+            </a>
+            <a href="#">
+                <img src="assets/facebook.png" alt="Facebook">
+            </a>
+            <a href="#">
+                <img src="assets/linkedin.png" alt="Linkedin">
+            </a>
+        </div>
+        <div class="alternative">
+            <span>OR</span>
+        </div>
         <form action="">
-            <div class="title">Login</div>
-            <div class="input-box">
-                <input type="text" placeholder="   E-mail..." required>
-                <div class="underline"></div>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="   Password..." required>
-                <div class="underline"></div>
-            </div>
-            <div class="input-box button">
-                <input type="submit" value="Login">
-            </div>
-        </form><br><hr>
-        <div class="option">Or connect with Social Media:</div><br><br>
-        <div class="facebook">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i> Sign in with Facebook</a>
-        </div>  
-        <div class="x">
-            <a href="#"><i class="fa-brands fa-x"></i> Sign in with X</a>
-        </div>     
-    </div>
+            <label for="name">
+                <span>Email</span>
+                <input type="text" id="name" name="name">
+            </label>
+            <label for="email">
+                <span>Password</span>
+                <input type="email" id="email" name="email">
+            </label>
+            <label for="password">
+                <span>Name</span>
+                <input type="password" id="password" name="password">
+            </label>
+            <input type="submit" value="Sing Up" id="button">
+        </form>
+    </main> 
     
+    <section class="images">
+        <img src="assets/register.png" alt="Mobile">
+        <div class="circle"></div>
+    </section>
 </body>
-
 </html>

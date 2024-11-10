@@ -1,151 +1,149 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-html, body{
-    display: grid;
-    height: 100vh;
-    width: 100%;
-    place-items: center;
-    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+body {
+    background-color: #1B2029;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.container{
-    background: #fff;
-    max-width: 350px;
-    width: 100%;
-    padding: 25px 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 10px rgba(255, 0, 0, 0.15);
+main {
+    width: 40vw;
+    max-width: 400px; 
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.container form .title{
-    font-size: 30px;
-    font-weight: 600;
-    margin: 20px 0 10px 0;
+main h1 {
+    color: #8880FE;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+main .social-media {
+    display: flex;
+    gap: 1rem; 
+    margin-bottom: 1rem;
+}
+
+main .social-media a {
+    text-decoration: none;
+}
+
+main .social-media img {
+    width: 36px;
+}
+
+main .alternative {
+    margin: 1rem 0;
+}
+
+main .alternative span {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.3);
     position: relative;
 }
 
-.container .title::before{
+main .alternative span::before,
+main .alternative span::after {
+    position: absolute;
     content: '';
-    position: absolte;
-    height: 4px;
-    width: 33px;
-    bottom: 3px;
-    left: 0;
-    border-radius: 7px;
-    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+    height: 1px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.3);
 }
 
-.container form .input-box{
-    width: 100%;
+main .alternative span::before {
+    right: 120%;
+}
+
+main .alternative span::after {
+    left: 120%;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+}
+
+main form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
+main form label span {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+main form input {
+    background: #161923;
+    width: 100%; 
     height: 50px;
-    margin-top: 25px;
-    padding: px;
-    position: relative;
+    padding: 0 1rem;
+    margin-top: 0.5rem;
+    outline: none;
+    color: rgb(166, 166, 166);
+    font-size: 1rem;
+    border: 1px solid #040B18;
+    border-radius: 8px;
 }
 
-.container form .input-box input{
+main form input[type="submit"] {
+    cursor: pointer;
+    width: 100%; 
+    margin-top: 2rem;
+    padding: 0.75rem 0;
+    border: none;
+    border-radius: 32px;
+    background: #6C63FF;
+    color: white;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+}
+
+main form input[type="submit"]:hover {
+    background: #5952d4;
+}
+
+section.images {
+    width: 50vw; 
+    max-width: 500px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+section.images img {
+    width: 150%; 
+}
+
+section.images .circle {
+    position: absolute;
     height: 100%;
     width: 100%;
-    outline: none;
-    border: none;
-    font-size: 16px;
-}
-
-.underline::before{
-    position: absolute;
-    content: '';
-    height: 2px;
-    width: 100%;
-    background: #ccc;
+    top: 0;
     left: 0;
-    bottom: 0;
-}
-
-.underline::after{
-    position: absolute;
-    content: '';
-    height: 2px;
-    width: 100%;
-    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
-    left: 0;
-    bottom: 0;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: all 0.3s ease;
-}
-
-.container form .input-box input:focus ~.underline::after,
-.container form .input-box input:valid ~.underline::after{
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.container form .button{
-    margin: 40px 0 20px 0;
-    
-}
-
-.container form .input-box input[type="submit"]{
-    font-size: 17px;
-    color: #fff;
-    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.container form .input-box input[type="submit"]:hover{
-    letter-spacing: 1px;
-    background: linear-gradient(to left, #99004D 0%, #ff0080 100%);
-    
-}
-
-.container .facebook a,
-.container .x a{
-    display: block;
-    width: 100%;
-    height: 45px;
-    font-size: 15px;
-    text-decoration: none;
-    padding-left: 20px;
-    color: #fff;
-    line-height: 45px;
-    border-radius: 5px;
-}
-
-.container .facebook i,
-.container .x i{
-    padding-right: 12px;
-    font-size: 20px;
-}
-
-.container .facebook a{
-    margin: 20px 0 50px 0;
-    background: linear-gradient(to right, #5b88e9 0%, #26427f 50%, #132a5c );
-}
-
-.container .facebook a:hover{
-    background: linear-gradient(to left, #5b88e9 0%, #26427f 50%, #132a5c );
-    letter-spacing: 1px;
-}
-
-
-.container .x a{
-    margin: 20px 0 50px 0;
-    background: linear-gradient(to right, #808080 50%, #000000 100%);
-}
-
-.container .x a:hover{
-    background: linear-gradient(to left, #808080 50%, #000000 100%);
-    letter-spacing: 1px;
-}
-
-.option{
-    text-align: center;
-    font-size: 12px;
+    background: linear-gradient(445deg, #E8CBC0, #636FA4);
+    clip-path: circle(40% at right 80%);
+    z-index: -1;
 }
